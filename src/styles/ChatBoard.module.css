@@ -1,0 +1,25 @@
+.chatBoardWraper{
+  overflow: auto;
+  flex: 3;
+  background-color:rgb(217 224 227 / 48%);
+}
+
+.leftMessageStyle{
+  border: 2px solid red;
+  width: 50%;
+  border-radius: 30px;
+  padding: 4px;
+  background: #d55681;
+  margin: 2px;
+}
+
+.rightMessageStyle{
+  position: relative;
+  border: 2px solid red;
+  width: 50%;
+  border-radius: 30px;
+  padding: 4px;
+  background: #269f93;
+  margin: 2px;
+  left: 59%;
+}

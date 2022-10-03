@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+._container{
+  max-width: 1046px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box; 
+}
+
+.chatListWraper{
+  overflow: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.chatListWraper > img{
+  width: 20px;
+}
+
+.chatListWraper>div {
+  cursor: pointer;
+  height: 20%;
+  border-bottom: 1px solid rgb(175 171 171 / 71%);
+}

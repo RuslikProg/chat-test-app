@@ -1,0 +1,82 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  display: flex;
+  /* flex-wrap: wrap; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  flex: 1 100%;
+  height: 100vh;
+}
+
+.leftSidebar{
+  display: flex;
+  flex: 0 1 30%;
+  flex-direction: column;
+}
+
+.rightSidebar{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 70%;
+  border-left: 2px solid rgb(208 214 217);
+}
+
+.leftSidebarHeader{
+  background-color: rgb(217 224 227 / 68%);
+  gap: 5vh;
+  padding: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid rgb(208 214 217);
+}
+
+.rightSidebarHeader{
+  background-color: rgb(217 224 227 / 68%);
+  padding: 1.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid rgb(208 214 217);
+}
+
+.rightSidebarFooter{
+  border-top: 2px solid rgb(208 214 217);
+  gap: 5vh;
+  padding: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(217 224 227 / 68%);
+  height: 10vh;
+}
+
+.leftMessageStyle{
+  color: white;
+  float: left;
+  position: relative;
+  max-width: 50%;
+  border-radius: 30px;
+  padding: 10px 15px;
+  background: #244454e0;
+  margin: 10px;
+  clear: both;
+}
+
+.rightMessageStyle{
+  color: white;
+  float: right;
+  max-width: 50%;
+  border-radius: 30px;
+  padding: 10px 15px;
+  background: #aac0cb;
+  margin: 10px;
+  clear: both;
+}

@@ -1,0 +1,27 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+
+input{
+  border: 1px solid rgb(193, 198, 201);
+  border-radius: 20px;
+  width: 100%;
+  line-height: 2rem;
+  padding: 5px 10px;;
+}
+
+.searchInput{
+  width: 100%;
+
+  height: 1.5rem;
+  padding-left: 0.2rem;
+}
+
+.messageInput{
+  height: 2rem;
+  width: 100%;
+  border-radius: 20px;
+}
+

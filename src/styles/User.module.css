@@ -1,0 +1,17 @@
+.userBlock{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.userBlock__photo{
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 10vh;
+}
+
+img{
+  width: 100%;
+  border-radius: 60px ;
+}
