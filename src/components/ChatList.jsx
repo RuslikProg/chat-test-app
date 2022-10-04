@@ -11,7 +11,7 @@ const ChatList = () => {
 
   useEffect(() => {
     getListUsers();
-  }, [data]);
+  }, []);
 
   const getListUsers = () => {
     dispatch(getList());
@@ -21,7 +21,10 @@ const ChatList = () => {
     <div className={styless.chatListWraper}>
       <h2>Chats</h2>
       {data?.map((e,i)=>{
-        return<User key={i} imgSize={'40px'} src={defaultLogo} userFullname={e.name}/>
+        return <User key={i} 
+                imgSize={'40px'} 
+                src={e.avatar_url} 
+                userFullname={e.login}/>
       })}
     </div>
   );

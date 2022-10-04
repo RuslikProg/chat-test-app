@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from './Input';
-
+//not used yet
 const Registration = () => {
   return (
     <>
@@ -13,7 +13,6 @@ const Registration = () => {
           title='Password'
         />
         <span></span>
-        
       </form>
     </>
   );

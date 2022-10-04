@@ -1,4 +1,4 @@
-import React, { useEffect, memo, useCallback,useRef}from 'react';
+import React, { useEffect, useCallback}from 'react';
 import styless from './styles/App.module.css';
 import ChatList from './components/ChatList';
 import ChatBoard from './components/ChatBoard';
@@ -9,29 +9,7 @@ import {getAnswer} from './reducers/chatThunk';
 import {changeInput, submitMessage}from './reducers/chat';
 import * as R from 'ramda';
 import cahukLogo from './icons/Screenshot_2.png';
-
-const ListOfMessages = memo(({data})=>{
-  const messageRef = useRef();
-
-  useEffect(() => {
-    if (messageRef.current) {
-      messageRef.current.scrollIntoView(
-        {
-          behavior: 'smooth',
-          block: 'end',
-          inline: 'nearest'
-        })
-    }
-  },
-  [data])
-
-  return data.length ? data?.map((e,i)=>{
-    return e.type ?
-          (<div ref={messageRef} className={styless.rightMessageStyle} key={i}>{e.value}</div>) 
-          : 
-          (<div ref={messageRef} className={styless.leftMessageStyle} key={i}>{e.value}</div>);
-  }) : [];
-});
+import ListOfMessages from './components/MessagesList';
 
 function App() {
   const dispatch = useDispatch();
@@ -46,12 +24,21 @@ function App() {
     }
   }, [data]);
 
+  useEffect(() => {
+       fetch(`https://api.github.com/users`)
+      .then(response => response.json())
+      .then(response => {
+        console.log(response);
+          return response;
+      }) 
+  }, [input]);
+
   const onChangeInput = useCallback((e) =>{
     dispatch(changeInput(e.target.value))
   },[]);
 
   const onKeyDownMsg = (e)=>{ 
-    if(e.key === 'Enter'){
+    if(e.key === 'Enter' && !!input){
       dispatch(submitMessage({
         value: input,
         icon: '',
@@ -66,8 +53,7 @@ function App() {
     <div className={styless.App}>
       <div className={styless.leftSidebar}>
         <div className={styless.leftSidebarHeader}>
-          <User
-          />
+          <User/>
           <Input
             placeholder={'Search input'}
           />

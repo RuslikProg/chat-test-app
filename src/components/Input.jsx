@@ -14,9 +14,12 @@ const Input = (props) => {
   } = props;
   
   return (
-    <div  style={{position: 'relative'}}>
+    <div style={{position: 'relative'}}>
       {
-        icon && iconLeft && 
+        icon 
+        && 
+        iconLeft 
+        && 
         <img className={styless.leftIconStyle} 
              alt={alt} 
              src={icon}
@@ -29,7 +32,10 @@ const Input = (props) => {
         onKeyDown={onKeyDown}
       />
       {
-        icon && iconRight && 
+        icon 
+        && 
+        iconRight 
+        && 
         <img className={styless.rightIconStyle} 
              alt={alt} 
              src={icon}
